@@ -40,7 +40,7 @@
 #define LED_BUILTIN 33  // LED interno del ESP32-CAM
 
 // Configuración de detección
-#define CONFIDENCE_THRESHOLD 0.
+#define CONFIDENCE_THRESHOLD 0.7
 #define DORMIDO_TIME_THRESHOLD 3000  // 3 segundos en milisegundos
 
 #if defined(CAMERA_MODEL_ESP_EYE)
@@ -372,4 +372,5 @@ static int ei_camera_get_data(size_t offset, size_t length, float *out_ptr)
 
 #if !defined(EI_CLASSIFIER_SENSOR) || EI_CLASSIFIER_SENSOR != EI_CLASSIFIER_SENSOR_CAMERA
 #error "Invalid model for current sensor"
+
 #endif
